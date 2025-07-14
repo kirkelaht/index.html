@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirke Laht - Ärinõustaja ja ESG Spetsialist | Ettevõtete Kasvu ja Jätkusuutlikkuse Partner</title>
+  <meta name="description" content="Kirke Laht on Eesti juhtiv ärinõustaja ja ESG spetsialist. Aitan ettevõtetel kasvada mõtestatult, luues koos nendega süsteemid ja strateegiad, mis toovad pikaajalist väärtust. Teenused: äri- ja protsesside optimeerimine, ESG strateegia, andmepõhine juhtimistugi." />
+  <meta name="keywords" content="ärinõustaja, ESG, jätkusuutlikkus, ettevõtete kasv, protsesside optimeerimine, andmepõhine juhtimine, Eesti" />
+  <meta name="author" content="Kirke Laht" />
+  <meta property="og:title" content="Kirke Laht - Ärinõustaja ja ESG Spetsialist" />
+  <meta property="og:description" content="Aitan ettevõtetel kasvada mõtestatult, luues koos nendega süsteemid ja strateegiad, mis toovad pikaajalist väärtust." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kirkelaht.com" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kirke Laht - Ärinõustaja ja ESG Spetsialist" />
+  <meta name="twitter:description" content="Aitan ettevõtetel kasvada mõtestatult, luues koos nendega süsteemid ja strateegiad, mis toovad pikaajalist väärtust." />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff6e7f 100%);
+      color: #333;
+    }
+    header, section, footer {
+      padding: 32px 20px;
+      max-width: 800px;
+      margin: 0 auto 16px auto;
+    }
+    .main-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      backdrop-filter: blur(6px);
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+    .menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      position: static;
+      left: auto;
+      transform: none;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .menu li a:hover {
+      color: #fcb69f;
+    }
+    .logo {
+      height: 64px;
+      margin-right: 32px;
+    }
+    .contact-btn {
+      background: #ffecd2;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-left: 32px;
+    }
+    .contact-btn:hover {
+      background: #ffe2c6;
+    }
+    h1, h2 {
+      color: #111;
+      text-align: center;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section-title {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      color: #000;
+    }
+    ul li::before {
+      content: "\2714\0020";
+      color: green;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    .testimonial-card {
+      background: rgba(255, 236, 210, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 260px;
+    }
+    .testimonial-stars {
+      color: #fcb69f;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+    .testimonial-avatar {
+      font-size: 2.5em;
+      margin-bottom: 12px;
+    }
+    .testimonial-quote {
+      font-style: italic;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .testimonial-meta {
+      color: #555;
+      font-size: 1em;
+      text-align: center;
+    }
+    .partner-logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      justify-items: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .partner-logos img {
+      max-height: 120px;
+      max-width: 288px;
+      object-fit: contain;
+      filter: grayscale(0.2);
+      transition: filter 0.2s, background 0.2s;
+      background: #fff8f2;
+      border-radius: 8px;
+      padding: 8px 16px;
+    }
+    .partner-logos img:hover {
+      filter: none;
+      background: #ffecd2;
+    }
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .main-navbar {
+        padding: 8px 16px;
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .menu {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .menu li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+      
+      .logo {
+        height: 48px;
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+      
+      .contact-btn {
+        margin-left: 0;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+      
+      header, section, footer {
+        padding: 20px 16px;
+        margin: 0 auto 12px auto;
+      }
+      
+      .section-title {
+        margin-top: 16px;
+        margin-bottom: 12px;
+        font-size: 1.5rem;
+      }
+      
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 16px 0;
+      }
+      
+      .testimonial-card {
+        min-height: auto;
+        padding: 16px 12px;
+      }
+      
+      .partner-logos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .partner-logos img {
+        max-height: 80px;
+        max-width: 200px;
+      }
+      
+      /* Main headline responsive */
+      .main-headline {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+        margin: 16px auto 12px auto;
+      }
+      
+      /* About section responsive */
+      #kes-on-kirke {
+        flex-direction: column;
+        gap: 20px;
+        margin: 16px auto 8px auto;
+      }
+      
+      #kes-on-kirke img {
+        width: 6cm;
+        height: 4.5cm;
+      }
+      
+      /* Service boxes responsive */
+      .service-box {
+        padding: 16px 12px !important;
+        margin-bottom: 16px;
+      }
+      
+      /* Contact button responsive */
+      .contact-section {
+        margin: 40px auto !important;
+        padding: 0 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .main-navbar {
+        padding: 6px 12px;
+      }
+      
+      .menu {
+        gap: 12px;
+      }
+      
+      .menu li a {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+      }
+      
+      .logo {
+        height: 40px;
+      }
+      
+      .contact-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+      
+      .main-headline {
+        font-size: 1.3rem !important;
+      }
+      
+      .section-title {
+        font-size: 1.3rem;
+      }
+      
+      #kes-on-kirke img {
+        width: 5cm;
+        height: 3.75cm;
+      }
+    }
+    
+    /* Touch-friendly improvements */
+    .menu li a,
+    .contact-btn,
+    button,
+    input {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    /* Ensure proper text scaling */
+    html {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css?v=1.0.1">
+</head>
+<body>
+  <nav class="main-navbar">
+    <img src="image/logo.png" alt="Logo" class="logo" />
+    <ul class="menu">
+      <li><a href="#kes-on-kirke">Kes on Kirke?</a></li>
+      <li><a href="#teenused">Teenused</a></li>
+      <li><a href="#tagasiside">Tagasiside</a></li>
+      <li><a href="#koostoopartnerid">Koostööpartnerid</a></li>
+    </ul>
+    <button onclick="copyEmail()" class="contact-btn" style="cursor: pointer;">Kirjuta mulle</button>
+  </nav>
+  <header>
+    <div style="font-size: 2.1rem; font-weight: bold; margin-top: 24px; margin-bottom: 16px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;" class="main-headline">
+      Aitan ettevõtetel kasvada mõtestatult,<br>
+      luues koos nendega süsteemid ja strateegiad,<br>
+      mis toovad pikaajalist väärtust
+    </div>
+  </header>
+  <section id="kes-on-kirke" style="display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 800px; margin: 24px auto 8px auto;">
+    <img src="image/img_1879.jpg" alt="Portrait of Kirke Laht" style="width: 8cm; height: 6cm; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); flex-shrink: 0; margin-bottom: 16px;" />
+    <div style="width: 100%;">
+      <h2 style="text-align: center;">Kes on Kirke?</h2>
+      <p>Mina olen Kirke Laht – ettevõtja, strateegiline mõtleja ja <strong>ärinõustaja</strong>, kes aitab ettevõtetel kasvada süsteemselt ja teadlikult. Minu taust ühendab praktilise juhtimiskogemuse strateegilise lähenemisega – tean, kuidas viia ideed ellu nii paberil kui ka päris maailmas.</p>
+      <p>Asutasin ja juhtisin Oma Põrsas OÜ-d, mille aastakäive oli üle 1,5 miljoni euro, avasin 7 lihapoodi ja juhtisin 30-liikmelist meeskonda. Selle kogemuse kaudu õppisin, kuidas struktuure üles ehitada, meeskondi koordineerida ja otsustada ka surve all.</p>
+      <p>Lisaks olen töötanud <strong>konsultandi</strong> ja audiitorina, aidates erineva suurusega ettevõtetel:</p>
+      <ul>
+        <li>Parandada <strong>tööprotsesse</strong> ja muuta need efektiivsemaks</li>
+        <li>Luua ja ellu viia <strong>ESG strateegiaid</strong> ja jätkusuutlikkuse lahendusi</li>
+        <li>Viia läbi finants- ja juhtimisauditeid</li>
+        <li>Viia ettevõtted vastavusse regulatsioonide ja kvaliteedistandarditega</li>
+      </ul>
+      <p>Minu unikaalsus peitub võimes siduda strateegiline mõtlemine ja praktiline teostus. Olen käed-külge tüüpi tegutseja, kes ei jää kinni teooriasse, vaid viib plaanid ka ellu. Pean oluliseks <strong>andmepõhist juhtimist</strong> – usun, et just õiged andmed annavad võimaluse <strong>protsesse optimeerida</strong> ning teha teadlikke otsuseid, mis toovad kaasa reaalseid tulemusi.</p>
+      <p style="text-align: center; font-size: 1.25em;"><br><strong>Kus on kõige suurem mõju võrreldes tehtava pingutusega?</strong></p>
+      <p style="text-align: center;"><strong>Olen kasvule ja kasumlikkusele suunatud ettevõtjale strateegiline ja praktiline partner, kes aitab lihtsustada keerulisi protsesse ning tuua andmepõhise selguse ja mõõdetava efektiivsuse.</strong></p>
+    </div>
+  </section>
+  <section id="tagasiside">
+    <h2 class="section-title">Tagasiside</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <div class="testimonial-quote">
+          "Soovin Dimedium Grupi nimel avaldada oma südamlikku tänu selle suure pühendumuse eest, mida olete meie 2023. aasta jätkusuutlikkuse aruande koostamisel näidanud... Oleme uhked selle üle, mida oleme koos saavutanud ning see avaldab meie ettevõttele ja selle mainele püsivat mõju ka tulevikus."
+        </div>
+        <div class="testimonial-meta">
+          <strong>Sivar</strong><br />Tegevjuht | Dimedium Group OÜ
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <div class="testimonial-quote">
+          "Kirke loeb olukordi õhust ning panustab täpselt sinna, kuhu vaja. Tema tähelepanu detailidele toob asjadele lahendusi ning ta ei lase asjadel minna kuniks kõik on tehtud. Ta tuletab asju meelde kuni kõik, mis vaja saab tehtud, et toimuks edasi liikumine."
+        </div>
+        <div class="testimonial-meta">
+          <strong>Kaia</strong><br />Ehtedisainer | Kaia Ansip Jewellery
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="teenused">
+    <h2 class="section-title">Teenused</h2>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>🔁 Subscription-teenus: Juhi tugi igapäevaselt</strong><br>
+        Kuu- või kvartalipõhine püsikoostöö ettevõtjale, kes soovib stabiilset tuge ja nõu, kui seda vaja.<br>
+        <span style="color: #000;">✅ 1–2 kohtumist kuus<br>✅ Kiirkonsultatsioonid e-posti/telefoni teel<br>✅ Protsesside või aruandluse jooksev tugi<br>✅ Paindlik, ilma pikaajalise sidumiseta</span><br>
+        <span style="color:#a16207;">💡 Tunne, et sul on kõrval inimene, kes päriselt aitab – igapäevaselt, mitte ainult kord kvartalis.</span>
+      </div>
+      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>👥 Juhtide ja strateegiline partnerlus</strong><br>
+        Juht ei peaks olema üksi. Toetan sind kui strateegiline ja praktiline partner – küsin, vaidlustan, suunan ja hoian fookust.<br>
+        <span style="color:#a16207;">💡 Sa ei saa ainult vastuseid – sa saad mõttekaaslase, kes aitab edasi liikuda.</span>
+      </div>
+      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>📊 Andmepõhine juhtimistugi</strong><br>
+        Loome süsteemi, mis annab juhile regulaarselt selge ülevaate ettevõtte rahalisest ja tegevuslikust olukorrast. Näed, kuhu aeg ja raha tegelikult kulub ning millele keskenduda.<br>
+        <span style="color:#a16207;">💡 Reaalajas selgus, mitte hilinenud tagasivaade.</span>
+      </div>
+      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>🔧 Äri- ja protsesside optimeerimine</strong><br>
+        Efektiivsus algab selgusest. Aitan kaardistada ja korrastada ettevõtte sisemised <strong>tööprotsessid</strong>, rollid ja vastutused nii, et süsteem toetaks kasvu, mitte ei takistaks seda.<br>
+        <span style="color:#a16207;">💡 Koos elluviimisega, mitte ainult PowerPointis.</span>
+      </div>
+      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>♻️ ESG strateegia ja aruandlus</strong><br>
+        Muutuvad nõuded ja ootused ei pea olema koormaks. Loon koos sinuga <strong>ESG-lahendused</strong>, mis ei täida ainult regulatsioone, vaid toovad ka ärilist väärtust – sisemiselt ja väliselt.<br>
+        <span style="color:#a16207;">💡 Ei ole lihtsalt raport, vaid teadlik juhtimistööriist.</span>
+      </div>
+      <div style="background: #ffe2c6; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+        <strong>🧾 Hinnastamise alused</strong><br>
+        <strong>Ärinõustamise teenused</strong> algavad alates 590 €/projekt<br>
+        Subscription-paketid alates 390 €/kuu<br>
+        Tunnihind (nõustamine, kiirkonsultatsioon)	95 €/tund<br><br>
+        👉 Esmane konsultatsioon 45 min on tasuta – arutame läbi ettevõtte vajadused, valime sobiva teenusepaketi ja lepime kokku töömahu.
+      </div>
+    </div>
+  </section>
+  <div style="text-align: center; margin: 40px 0;" class="contact-section">
+    <button onclick="copyEmail()" style="background: #ffecd2; color: #333; border: none; border-radius: 8px; padding: 14px 24px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.2s; display: inline-block; cursor: pointer;">
+      Kirjuta mulle
+    </button>
+  </div>
+  <section id="koostoopartnerid">
+    <h2 class="section-title">Koostööpartnerid</h2>
+    <div class="partner-logos">
+      <img src="image/partner2.png" alt="Partner 2" />
+      <img src="image/partner1.jpg" alt="Partner 1" />
+      <img src="image/partner3.jpg" alt="Partner 3" />
+      <img src="image/partner4.png" alt="Partner 4" />
+      <img src="image/partner5.png" alt="Partner 5" />
+      <img src="image/partner6.png" alt="Partner 6" />
+      <img src="image/partner7.png" alt="Partner 7" />
+      <!-- Add more logos as needed -->
+    </div>
+  </section>
+  <!-- Contact Form -->
+<section id="contact" style="max-width: 500px; margin: 60px auto;" class="contact-section">
+    <div style="text-align: center;">
+      <button onclick="copyEmail()" style="background: #ffecd2; color: #333; border: none; border-radius: 8px; padding: 14px 24px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.2s; display: inline-block; cursor: pointer;">
+        Kirjuta mulle
+      </button>
+    </div>
+  </section>
+  
+  <script>
+    // Copy email to clipboard function
+    function copyEmail() {
+      const email = 'kirke.laht@gmail.com';
+      
+      // Try to copy to clipboard
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(function() {
+          showMessage('E-maili aadress kopeeritud! (' + email + ')');
+        }).catch(function() {
+          fallbackCopy(email);
+        });
+      } else {
+        fallbackCopy(email);
+      }
+    }
+    
+    // Fallback copy method
+    function fallbackCopy(email) {
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        document.execCommand('copy');
+        showMessage('E-maili aadress kopeeritud! (' + email + ')');
+      } catch (err) {
+        showMessage('E-maili aadress: ' + email);
+      }
+      
+      document.body.removeChild(textArea);
+    }
+    
+    // Show message to user
+    function showMessage(message) {
+      // Create message element
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = message;
+      messageDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        z-index: 1000;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        animation: slideIn 0.3s ease;
+      `;
+      
+      // Add animation CSS
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideIn {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      document.body.appendChild(messageDiv);
+      
+      // Remove message after 3 seconds
+      setTimeout(function() {
+        messageDiv.style.animation = 'slideOut 0.3s ease';
+        setTimeout(function() {
+          if (messageDiv.parentNode) {
+            document.body.removeChild(messageDiv);
+          }
+        }, 300);
+      }, 3000);
+    }
+  </script>
+
+  <footer>
+    <p>© 2025 Kirke Laht | <a href="https://linkedin.com/in/kirkelaht" target="_blank" style="color: #0066cc; text-decoration: none;">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
+
