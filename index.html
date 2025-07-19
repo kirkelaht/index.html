@@ -496,8 +496,9 @@
   <p style="text-align: center; font-size: 1.4em; margin: 32px auto 32px auto; max-width: none; font-weight: 500; color: #333; white-space: nowrap;">
     <strong>Võta ühendust ja teeme koos järgmise sammu!</strong>
   </p>
-  <form action="https://formspree.io/f/mjkoknpa" method="POST" style="background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+  <form action="https://formspree.io/f/mjkoknpa" method="POST" style="background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);" id="contactForm">
     <input type="hidden" name="_next" value="https://kirkelaht.vercel.app/#contact">
+    <input type="hidden" name="_captcha" value="false">
     <div style="margin-bottom: 20px;">
       <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Nimi *</label>
       <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s;">
@@ -535,9 +536,55 @@
       Saada sõnum
     </button>
   </form>
+  
+  <div id="successMessage" style="display: none; background: #ffecd2; color: #333; padding: 20px; border-radius: 12px; text-align: center; margin-top: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+    <h3 style="margin: 0 0 10px 0;">🎉 Tänan!</h3>
+    <p style="margin: 0;">Sinu sõnum on edukalt saadetud. Võtan sinuga 24h jooksul ühendust!</p>
+  </div>
 </section>
   
   <script>
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      
+      // Show loading state
+      submitButton.textContent = 'Saadetakse...';
+      submitButton.disabled = true;
+      
+      fetch('https://formspree.io/f/mjkoknpa', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show success message
+          document.getElementById('successMessage').style.display = 'block';
+          this.style.display = 'none';
+          
+          // Scroll to success message
+          document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Vabandust, esines viga. Palun proovi uuesti või kirjuta otse aadressile: kirke.laht@gmail.com');
+        
+        // Reset button
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      });
+    });
+    
     // Copy email to clipboard function
     function copyEmail() {
       const email = 'kirke.laht@gmail.com';
