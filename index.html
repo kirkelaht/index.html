@@ -26,7 +26,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff6e7f 100%);
+      background: #fff8f0;
       color: #333;
     }
     header, section, footer {
@@ -330,6 +330,17 @@
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
     }
+    
+    /* Contact form styling */
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #ffecd2 !important;
+      box-shadow: 0 0 0 3px rgba(255, 236, 210, 0.3);
+    }
+    
+    input:hover, textarea:hover, select:hover {
+      border-color: #ffecd2;
+    }
   </style>
   <link rel="stylesheet" href="styles.css?v=1.0.1">
 </head>
@@ -410,33 +421,33 @@
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px;">
-      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #ffecd2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>🔁 Subscription-teenus: Juhi tugi igapäevaselt</strong><br>
         Kuu- või kvartalipõhine püsikoostöö ettevõtjale, kes soovib stabiilset tuge ja nõu, kui seda vaja.<br>
         <span style="color: #000;">✅ 1–2 kohtumist kuus<br>✅ Kiirkonsultatsioonid e-posti/telefoni teel<br>✅ Protsesside või aruandluse jooksev tugi<br>✅ Paindlik, ilma pikaajalise sidumiseta</span><br>
         <span style="color:#a16207;">💡 Tunne, et sul on kõrval inimene, kes päriselt aitab – igapäevaselt, mitte ainult kord kvartalis.</span>
       </div>
-      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #ffecd2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>👥 Juhtide ja strateegiline partnerlus</strong><br>
         Juht ei peaks olema üksi. Toetan sind kui strateegiline ja praktiline partner – küsin, vaidlustan, suunan ja hoian fookust.<br>
         <span style="color:#a16207;">💡 Sa ei saa ainult vastuseid – sa saad mõttekaaslase, kes aitab edasi liikuda.</span>
       </div>
-      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #ffecd2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>📊 Andmepõhine juhtimistugi</strong><br>
         Loome süsteemi, mis annab juhile regulaarselt selge ülevaate ettevõtte rahalisest ja tegevuslikust olukorrast. Näed, kuhu aeg ja raha tegelikult kulub ning millele keskenduda.<br>
         <span style="color:#a16207;">💡 Reaalajas selgus, mitte hilinenud tagasivaade.</span>
       </div>
-      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #ffecd2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>🔧 Äri- ja protsesside optimeerimine</strong><br>
         Efektiivsus algab selgusest. Aitan kaardistada ja korrastada ettevõtte sisemised <strong>tööprotsessid</strong>, rollid ja vastutused nii, et süsteem toetaks kasvu, mitte ei takistaks seda.<br>
         <span style="color:#a16207;">💡 Koos elluviimisega, mitte ainult PowerPointis.</span>
       </div>
-      <div style="background: #fff8f2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #ffecd2; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>♻️ ESG strateegia ja aruandlus</strong><br>
         Muutuvad nõuded ja ootused ei pea olema koormaks. Loon koos sinuga <strong>ESG-lahendused</strong>, mis ei täida ainult regulatsioone, vaid toovad ka ärilist väärtust – sisemiselt ja väliselt.<br>
         <span style="color:#a16207;">💡 Ei ole lihtsalt raport, vaid teadlik juhtimistööriist.</span>
       </div>
-      <div style="background: #ffe2c6; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
+      <div style="background: #fff2e6; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 18px;" class="service-box">
         <strong>🧾 Hinnastamise alused</strong><br>
         <strong>Ärinõustamise teenused</strong> algavad alates 590 €/projekt<br>
         Subscription-paketid alates 390 €/kuu<br>
@@ -485,11 +496,45 @@
   <p style="text-align: center; font-size: 1.4em; margin: 32px auto 32px auto; max-width: none; font-weight: 500; color: #333; white-space: nowrap;">
     <strong>Võta ühendust ja teeme koos järgmise sammu!</strong>
   </p>
-  <div style="text-align: center;">
-    <button onclick="copyEmail()" style="background: #ffecd2; color: #333; border: none; border-radius: 8px; padding: 14px 24px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.2s; display: inline-block; cursor: pointer;">
-      Kirjuta mulle
+  <form action="https://formspree.io/f/mjkoknpa" method="POST" style="background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+    <input type="hidden" name="_next" value="https://kirkelaht.vercel.app/#contact">
+    <div style="margin-bottom: 20px;">
+      <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Nimi *</label>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s;">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">E-mail *</label>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s;">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label for="company" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Ettevõte</label>
+      <input type="text" id="company" name="company" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s;">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label for="service" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Teenus, mis huvi pakub</label>
+      <select id="service" name="service" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s;">
+        <option value="">Vali teenus...</option>
+        <option value="subscription">Subscription-teenus: Juhi tugi igapäevaselt</option>
+        <option value="partnership">Juhtide ja strateegiline partnerlus</option>
+        <option value="data">Andmepõhine juhtimistugi</option>
+        <option value="optimization">Äri- ja protsesside optimeerimine</option>
+        <option value="esg">ESG strateegia ja aruandlus</option>
+        <option value="other">Muu teenus</option>
+      </select>
+    </div>
+    
+    <div style="margin-bottom: 24px;">
+      <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Sõnum *</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Kirjelda oma vajadusi ja küsimusi..." style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; transition: border-color 0.2s; resize: vertical; font-family: inherit;"></textarea>
+    </div>
+    
+    <button type="submit" style="background: #ffecd2; color: #333; border: none; border-radius: 8px; padding: 14px 24px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.2s; display: inline-block; cursor: pointer; width: 100%;">
+      Saada sõnum
     </button>
-  </div>
+  </form>
 </section>
   
   <script>
