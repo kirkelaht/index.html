@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://kirkelaht.vercel.app/sitemap.xml
+Sitemap: https://kirkelaht.ee/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
@@ -14,3 +14,6 @@ Allow: /image/
 
 # Crawl delay (optional - be respectful to server)
 Crawl-delay: 1 
+# Performance optimizations
+Allow: /sw.js
+Allow: /manifest.json
