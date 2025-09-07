@@ -237,6 +237,29 @@
       background: #DFAF2C;
     }
 
+    /* Article Image */
+    .article-image {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .article-image img {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(189, 189, 189, 0.2);
+    }
+
+    .image-caption {
+      text-align: center;
+      color: #666666;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .main-navbar {
@@ -284,6 +307,10 @@
       .article-content li {
         font-size: 1rem;
       }
+      
+      .article-image img {
+        height: 250px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -326,7 +353,7 @@
       <span>📅 8 min lugemist</span> • <span>🎯 Äri nõustamine</span> • <span>📊 Subscription teenus</span>
     </div>
     <div class="back-to-blog">
-      <a href="blog.html">← Tagasi blogi</a>
+      <a href="blog.html">← Tagasi blogisse</a>
     </div>
   </section>
 
@@ -336,6 +363,11 @@
       <p>Ettevõtja või juhi tööpäev on täis väljakutseid - muutused on kiired, info maht tohutu ja otsuseid tuleb langetada kiiresti. Mõnikord tuleb kiiresti reageerida ootamatule ametiasutuse kirjale, vahel on vaja koostada tööleping, teinekord on tarvis teha strateegiline otsus piiratud info põhjal.</p>
       
       <p><strong>"Juhi igapäevane tugi" on teenus, mis ühendab need kaks maailma – strateegilise mõtlemise ja käed-külge praktilise teostuse.</strong></p>
+
+      <div class="article-image">
+        <img src="image/juhi-igapaevane.jpg" alt="Juhi igapäevane tugi - strateegiline ja praktiline partnerlus" />
+        <p class="image-caption">Strateegiline ja praktiline partnerlus ettevõtete kasvu toetamiseks</p>
+      </div>
 
       <h2>Probleem: juhil ei ole alati võimalik kõike ise teha</h2>
       
