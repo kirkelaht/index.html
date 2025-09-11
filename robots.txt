@@ -9,7 +9,6 @@ Disallow: /admin/
 Disallow: /private/
 
 # Allow all images
-Allow: /Image/
 Allow: /image/
 
 # Crawl delay (optional - be respectful to server)
