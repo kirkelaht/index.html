@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogi - Kirke Laht | Äri- ja Juhtimisnõustaja</title>
+  <meta name="description" content="Kirke Laht blogi - praktilised nõuanded ettevõtluse, juhtimise ja jätkusuutlikkuse teemadel. Loe artikleid andmepõhisest juhtimisest, ESG strateegiatest ja protsesside optimeerimisest.">
+  <meta name="keywords" content="blogi, äri nõuanded, juhtimine, ESG, ettevõtlus, protsessid, andmepõhine juhtimine">
+  <meta name="author" content="Kirke Laht">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kirkelaht.ee/blog.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kirkelaht.ee/blog.html">
+  <meta property="og:title" content="Blogi - Kirke Laht | Äri- ja Juhtimisnõustaja">
+  <meta property="og:description" content="Praktilised nõuanded ettevõtluse, juhtimise ja jätkusuutlikkuse teemadel.">
+  <meta property="og:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kirke Laht - Blogi">
+  <meta property="og:site_name" content="Kirke Laht">
+  <meta property="og:locale" content="et_EE">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kirkelaht.ee/blog.html">
+  <meta property="twitter:title" content="Blogi - Kirke Laht | Äri- ja Juhtimisnõustaja">
+  <meta property="twitter:description" content="Praktilised nõuanded ettevõtluse, juhtimise ja jätkusuutlikkuse teemadel.">
+  <meta property="twitter:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  <meta property="twitter:image:alt" content="Kirke Laht - Blogi">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1A1A1A;
+      background: #FAFAFA;
+    }
+
+    /* Navigation */
+    .main-navbar {
+      background: #FFFFFF;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #1A1A1A;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .menu li a:hover {
+      color: #F4B740;
+    }
+
+    .contact-btn {
+      background: #F4B740;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-btn:hover {
+      background: #DFAF2C;
+    }
+
+    /* Blog Header */
+    .blog-header {
+      background: #C9D8B6;
+      padding: 120px 24px 80px;
+      text-align: center;
+    }
+
+    .blog-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 24px;
+    }
+
+    .blog-header p {
+      font-size: 1.2rem;
+      color: #333333;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Blog Grid */
+    .blog-container {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    .blog-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(189, 189, 189, 0.2);
+      border: 1px solid #BDBDBD;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(189, 189, 189, 0.3);
+    }
+
+    .blog-image {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1A1A1A;
+      font-size: 3rem;
+    }
+
+    .blog-content {
+      padding: 24px;
+    }
+
+    .blog-content h3 {
+      color: #1A1A1A;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    .blog-content p {
+      color: #666666;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .reading-time {
+      color: #F4B740;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .read-more {
+      color: #F4B740;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .read-more:hover {
+      color: #DFAF2C;
+    }
+
+    /* Back to Home */
+    .back-home {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-home a {
+      background: #F4B740;
+      color: #1A1A1A;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .back-home a:hover {
+      background: #DFAF2C;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-navbar {
+        padding: 12px 16px;
+      }
+      
+      .logo {
+        height: 40px;
+      }
+      
+      .menu {
+        display: none;
+      }
+      
+      .contact-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .blog-header {
+        padding: 100px 16px 60px;
+      }
+      
+      .blog-header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .blog-header p {
+        font-size: 1.1rem;
+      }
+
+      .blog-container {
+        padding: 60px 16px;
+      }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .blog-card {
+        margin-bottom: 0;
+      }
+      
+      .blog-content {
+        padding: 20px;
+      }
+      
+      .blog-content h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+      
+      .blog-header p {
+        font-size: 1rem;
+      }
+      
+      .blog-content h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-navbar">
+    <img src="image/logo.png" alt="Logo" class="logo" />
+    <ul class="menu">
+      <li><a href="index.html#about">Kes on Kirke?</a></li>
+      <li><a href="index.html#services">Teenused</a></li>
+      <li><a href="index.html#testimonials">Tagasiside</a></li>
+      <li><a href="index.html#blog">Blogi</a></li>
+      <li><a href="index.html#partners">Koostööpartnerid</a></li>
+    </ul>
+    <button onclick="window.location.href='index.html#contact'" class="contact-btn">Kirjuta mulle</button>
+  </nav>
+
+  <!-- Blog Header -->
+  <section class="blog-header">
+    <h1>Blogi ja mõtted</h1>
+    <p>Jagan oma kogemusi ja mõtteid ettevõtluse, juhtimise ja jätkusuutlikkuse teemadel. Siit leiad praktilisi nõuandeid ja nippe, mis aitavad sul teha paremaid otsuseid.</p>
+    <div style="margin-top: 32px;">
+      <a href="index.html" style="background: #F4B740; color: #1A1A1A; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; display: inline-block;">← Tagasi avalehele</a>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <div class="blog-container">
+    <div class="blog-grid">
+      <!-- Original blog post - Juhi igapäevane tugi -->
+      <div class="blog-card">
+        <div class="blog-image" style="background: linear-gradient(135deg, #F4B740 0%, #DFAF2C 100%); background-image: url('image/juhi-igapaevane.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Kuidas teenus "Juhi igapäevane tugi" aitab nii strateegilistes kui ka igapäevastes küsimustes toetada</h3>
+          <p>Ettevõtja või juhi tööpäev on täis väljakutseid - muutused on kiired, info maht tohutu ja otsuseid tuleb langetada kiiresti. "Juhi igapäevane tugi" on teenus, mis ühendab strateegilise mõtlemise ja käed-külge praktilise teostuse.</p>
+          <div class="blog-meta">
+            <span class="reading-time">8 min lugemist</span>
+            <a href="juhi-igapaeva-tugi.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- August 2025 - HIDDEN -->
+      <div class="blog-card" style="display: none;">
+        <div class="blog-image" style="background: linear-gradient(135deg, #F4B740 0%, #DFAF2C 100%); background-image: url('image/august-2025/cursor-hackathon.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>August 2025: Cursor Hackathon ja turu-uuring</h3>
+          <p>Augustis tutvusin uute ja huvitavate inimestega, kes on julgustanud mind tegutsema rohkem enesekindlamalt. Osalesin Cursori Hackathonil, kus kohtusid inimesed, kes arendavad mõnda teenust, platvormi või pakuvad meelelahutuslikku ajaviidet.</p>
+          <div class="blog-meta">
+            <span class="reading-time">6 min lugemist</span>
+            <a href="august-2025-cursor-hackathon-ja-turu-uuring.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- July 2025 - HIDDEN -->
+      <div class="blog-card" style="display: none;">
+        <div class="blog-image" style="background: linear-gradient(135deg, #C9D8B6 0%, #B8C9A5 100%); background-image: url('image/juuli-2025/antler-spikecamp.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Juuli 2025: Antler Spikecamp ja puhkus Dolomiitides</h3>
+          <p>Juuli tõi kaasa inspireerivaid kohtumisi, praktilisi projekte ja mõnusa matkapuhkuse. Osalesin Antler Spikecampil naisettevõtjatele, aitasin kliendil luua omahinna arvutamise valemeid ja matkasin nädala Dolomiitides.</p>
+          <div class="blog-meta">
+            <span class="reading-time">7 min lugemist</span>
+            <a href="juuli-2025-antler-spikecamp-ja-dolomiidid.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- June 2025 - HIDDEN -->
+      <div class="blog-card" style="display: none;">
+        <div class="blog-image" style="background: linear-gradient(135deg, #F4B740 0%, #DFAF2C 100%); background-image: url('image/juuni-2025/suve-villa-valmis.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Juuni 2025: Suve Villa ja ISO audit BREK OÜ-s</h3>
+          <p>Juunis veetsin kolm nädalat Võsul, kus keskendusin Suve Villa valmistamisele. Töötan osalise koormusega BREK OÜ-s, kus üks minu vastutusvaldkondi on ISO 9001:2015 kvaliteedijuhtimissüsteemi toimimine.</p>
+          <div class="blog-meta">
+            <span class="reading-time">6 min lugemist</span>
+            <a href="juuni-2025-suve-villa-ja-iso-audit.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- April 2025 - HIDDEN -->
+      <div class="blog-card" style="display: none;">
+        <div class="blog-image" style="background: linear-gradient(135deg, #C9D8B6 0%, #B8C9A5 100%); background-image: url('image/aprill-2025/omahinna-kalkulatsioon.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Aprill 2025: Väikeettevõtete nõustamine ja kinnisvara Itaalias</h3>
+          <p>Aprillis keskendusin kahele valdkonnale, mis mind tõeliselt inspireerivad – väikeettevõtete nõustamine ja kinnisvara. Toetasin mitmeid väikeettevõtteid finants- ja protsessijuhtimise küsimustes.</p>
+          <div class="blog-meta">
+            <span class="reading-time">7 min lugemist</span>
+            <a href="aprill-2025-väikeettevõtete-nõustamine.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- March 2025 - HIDDEN -->
+      <div class="blog-card" style="display: none;">
+        <div class="blog-image" style="background: linear-gradient(135deg, #F4B740 0%, #DFAF2C 100%); background-image: url('image/marts-2025/võsu-maja.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Märts 2025: Kinnisvara fookus ja Airbnb majutuse arendamine</h3>
+          <p>Märtsis suunasin oma fookuse kinnisvarale. Mul on Võsul armas maja, mida rendin suvisel hooajal välja läbi Airbnb. Lõin süsteemi, mis pakub nii lastele kui täiskasvanutele rahulolu.</p>
+          <div class="blog-meta">
+            <span class="reading-time">6 min lugemist</span>
+            <a href="marts-2025-kinnisvara.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- February 2025 -->
+      <div class="blog-card">
+        <div class="blog-image" style="background: linear-gradient(135deg, #C9D8B6 0%, #B8C9A5 100%); background-image: url('image/veebruar-2025/516749618_10228653327540174_3922262962938015352_n.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Veebruar 2025: ESG praktikad ja vilepuhuja seadus</h3>
+          <p>Veebruaris süvenesin ESG ja kestlikkuse teemadesse, otsides parimaid praktikaid ning uusi teadmisi, kuidas ettevõtted saavad kestlikkust oma strateegiatesse lõimida.</p>
+          <div class="blog-meta">
+            <span class="reading-time">6 min lugemist</span>
+            <a href="veebruar-2025-esg-kestlikkus.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- January 2025 -->
+      <div class="blog-card">
+        <div class="blog-image" style="background: linear-gradient(135deg, #F4B740 0%, #DFAF2C 100%); background-image: url('image/jaanuar2025.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="blog-content">
+          <h3>Jaanuar 2025: SecD-Day mess ja kaitse- ja lennundustööstuse kohtumised</h3>
+          <p>Jaanuari üks tipphetki oli SecD-Day messi külastus Soomes. Arutasime tsiviilpommivarjendite ehitamise väljakutseid erinevates regioonides ja tutvusime KASO üliturvalise serveriruumi lahendusega.</p>
+          <div class="blog-meta">
+            <span class="reading-time">5 min lugemist</span>
+            <a href="jaanuar-2025-kokkuvote.html" class="read-more">Loe edasi →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back to Home -->
+    <div class="back-home">
+      <a href="index.html">← Tagasi avalehele</a>
+    </div>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      window.location.href = 'index.html#contact';
+    }
+  </script>
+</body>
+</html> 
+</html> 

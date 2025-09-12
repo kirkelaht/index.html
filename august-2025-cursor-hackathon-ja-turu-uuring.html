@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>August 2025: Cursor Hackathon ja turu-uuring - Kirke Laht</title>
+  <meta name="description" content="August 2025 kokkuvõte: Cursor Hackathon Tallinnas, turu-uuring, ettevõtjaks olemise mõtisklemine ja blogi sektsiooni lisamine kodulehele.">
+  <meta name="keywords" content="Cursor Hackathon, turu-uuring, ettevõtja, blogi, dsonordic.com, kessekeris.ee, Kirke Laht">
+  <meta name="author" content="Kirke Laht">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kirkelaht.ee/august-2025-cursor-hackathon-ja-turu-uuring.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kirkelaht.ee/august-2025-cursor-hackathon-ja-turu-uuring.html">
+  <meta property="og:title" content="August 2025: Cursor Hackathon ja turu-uuring">
+  <meta property="og:description" content="August 2025 kokkuvõte: Cursor Hackathon Tallinnas, turu-uuring, ettevõtjaks olemise mõtisklemine ja blogi sektsiooni lisamine kodulehele.">
+  <meta property="og:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  <meta property="og:site_name" content="Kirke Laht">
+  <meta property="og:locale" content="et_EE">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kirkelaht.ee/august-2025-cursor-hackathon-ja-turu-uuring.html">
+  <meta property="twitter:title" content="August 2025: Cursor Hackathon ja turu-uuring">
+  <meta property="twitter:description" content="August 2025 kokkuvõte: Cursor Hackathon Tallinnas, turu-uuring, ettevõtjaks olemise mõtisklemine ja blogi sektsiooni lisamine kodulehele.">
+  <meta property="twitter:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      color: #1A1A1A;
+      background: #FAFAFA;
+    }
+
+    /* Navigation */
+    .main-navbar {
+      background: #FFFFFF;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #1A1A1A;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .menu li a:hover {
+      color: #F4B740;
+    }
+
+    .contact-btn {
+      background: #F4B740;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-btn:hover {
+      background: #DFAF2C;
+    }
+
+    /* Article Header */
+    .article-header {
+      background: #C9D8B6;
+      padding: 120px 24px 80px;
+      text-align: center;
+    }
+
+    .article-header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 24px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .article-meta {
+      color: #666666;
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
+
+    .back-to-blog {
+      margin-top: 32px;
+    }
+
+    .back-to-blog a {
+      background: #F4B740;
+      color: #1A1A1A;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .back-to-blog a:hover {
+      background: #DFAF2C;
+    }
+
+    /* Article Content */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .article-content {
+      background: #FFFFFF;
+      padding: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(189, 189, 189, 0.1);
+      line-height: 1.8;
+    }
+
+    .article-content h2 {
+      color: #1A1A1A;
+      font-size: 1.8rem;
+      margin: 40px 0 20px 0;
+      font-weight: 600;
+    }
+
+    .article-content h3 {
+      color: #1A1A1A;
+      font-size: 1.4rem;
+      margin: 30px 0 15px 0;
+      font-weight: 600;
+    }
+
+    .article-content p {
+      color: #333333;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .article-content ul {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+
+    .article-content li {
+      color: #333333;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background: #F4B740;
+      color: #1A1A1A;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background: #F5F3EF;
+      border-left: 4px solid #F4B740;
+      padding: 20px;
+      margin: 30px 0;
+    }
+
+    .example-box h4 {
+      color: #1A1A1A;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .cta-section {
+      background: #2E2E2E;
+      color: #FFFFFF;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-section h3 {
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .cta-section p {
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      background: #F4B740;
+      color: #1A1A1A;
+      border: none;
+      border-radius: 8px;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .cta-btn:hover {
+      background: #DFAF2C;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-navbar {
+        padding: 12px 16px;
+      }
+      
+      .logo {
+        height: 40px;
+      }
+      
+      .menu {
+        display: none;
+      }
+      
+      .contact-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .article-header {
+        padding: 100px 16px 60px;
+      }
+      
+      .article-header h1 {
+        font-size: 2rem;
+      }
+
+      .article-container {
+        padding: 60px 16px;
+      }
+      
+      .article-content {
+        padding: 32px 24px;
+      }
+      
+      .article-content h2 {
+        font-size: 1.6rem;
+      }
+      
+      .article-content h3 {
+        font-size: 1.3rem;
+      }
+      
+      .article-content p,
+      .article-content li {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .article-content {
+        padding: 24px 20px;
+      }
+      
+      .article-content h2 {
+        font-size: 1.5rem;
+      }
+      
+      .article-content h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-navbar">
+    <img src="image/logo.png" alt="Logo" class="logo" />
+    <ul class="menu">
+      <li><a href="index.html#about">Kes on Kirke?</a></li>
+      <li><a href="index.html#services">Teenused</a></li>
+      <li><a href="index.html#testimonials">Tagasiside</a></li>
+      <li><a href="index.html#blog">Blogi</a></li>
+      <li><a href="index.html#partners">Koostööpartnerid</a></li>
+    </ul>
+    <button onclick="window.location.href='index.html#contact'" class="contact-btn">Kirjuta mulle</button>
+  </nav>
+
+  <!-- Article Header -->
+  <section class="article-header">
+    <h1>August 2025: Cursor Hackathon ja turu-uuring</h1>
+    <div class="article-meta">
+      <span>📅 August 2025</span> • <span>💻 Cursor Hackathon</span> • <span>📊 Turu-uuring</span>
+    </div>
+    <div class="back-to-blog">
+      <a href="blog.html">← Tagasi blogisse</a>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <div class="article-container">
+    <article class="article-content">
+      <p>Augustis tutvusin uute ja huvitavate inimestega, kes on julgustanud mind tegutsema rohkem enesekindlamalt. Osalesin Cursori Hackathonil, kus kohtusid inimesed, kes arendavad mõnda teenust, platvormi või pakuvad meelelahutuslikku ajaviidet.</p>
+      
+      <h2>💻 Cursor Hackathon Tallinnas</h2>
+      
+      <p>Osalesin <strong>Cursor Hackathonil</strong>, kus kohtusid inimesed, kes arendavad mõnda teenust, platvormi või pakuvad meelelahutuslikku ajaviidet. Inspireeriv oli vahetada mõtteid ja kuulata, milliste ideedega katsetatakse - vibe coding on nakkav!</p>
+
+      <div class="article-image">
+        <img src="image/august-2025/cursor-hackathon.jpg" alt="Cursor Hackathon Tallinnas" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 20px 0;">
+        <p class="image-caption" style="text-align: center; color: #666; font-size: 0.9rem; margin-top: 8px;">Cursor Hackathon Tallinnas - inspireeriv vibe coding</p>
+      </div>
+
+      <div class="highlight-box">
+        Tegin kaks maandumislehte kahele erinevale tootele: dsonordic.com ja kessekeris.ee
+      </div>
+
+      <h3>Miks on hackathonid olulised?</h3>
+      <ul>
+        <li><strong>Uued kontaktid</strong> – kohtud samameelsete inimestega</li>
+        <li><strong>Inspiratsioon</strong> – näed, milliseid ideid teised arendavad</li>
+        <li><strong>Kogemus</strong> – õpid uusi tehnoloogiaid ja lähenemisi</li>
+        <li><strong>Võrgustik</strong> – ehkad uusi koostöövõimalusi</li>
+        <li><strong>Enesekindlus</strong> – näed, et su oskused on väärtuslikud</li>
+      </ul>
+
+      <h2>📊 Turu-uuring ja kliendisuhtlus</h2>
+      
+      <p>Keskendusin ka <strong>turu-uuringule</strong>: analüüsisin konkurente, hindu ja tooteomadusi. Kohtusime potentsiaalsete klientidega, tutvustasime oma toodet ja uurisime, millest turul kõige enam puudust tuntakse.</p>
+
+      <div class="example-box">
+        <h4>📈 Turu-uuringu tulemused</h4>
+        <p>Saadud sisend aitab kohandada toodet turu ootustele vastavaks. See on oluline samm, et tagada toote edukas turuletoomine.</p>
+      </div>
+
+      <h3>Miks on turu-uuring oluline?</h3>
+      <ul>
+        <li><strong>Kliendi vajaduste mõistmine</strong> – tead, mida klient tõeliselt tahab</li>
+        <li><strong>Konkurentsianalüüs</strong> – näed, kuidas teised lahendavad sarnaseid probleeme</li>
+        <li><strong>Hinnastamise strateegia</strong> – tead, milline hind on konkurentsivõimeline</li>
+        <li><strong>Turuletoomise plaan</strong> – tead, kuidas toodet turule tuua</li>
+        <li><strong>Riskide vähendamine</strong> – vähem ootamatuid üllatusi</li>
+      </ul>
+
+      <h2>🤔 Ettevõtjaks olemise mõtisklemine</h2>
+      
+      <p>Mõtisklesin ettevõtjaks olemise üle - mida mul on oma koostööpartneritele pakkuda ja kuidas nende igapäevaelu lihtsamaks teha ning oma teadmisi ja kogemusi veel paremini jagada.</p>
+
+      <h3>Kuidas leida oma väärtus ettevõtjana?</h3>
+      <ul>
+        <li><strong>Oma tugevused</strong> – mida saad teha paremini kui teised</li>
+        <li><strong>Kliendi probleemid</strong> – milliseid probleeme saad lahendada</li>
+        <li><strong>Unikaalsus</strong> – mis teeb sind eriliseks</li>
+        <li><strong>Kogemus</strong> – mida oled juba õppinud</li>
+        <li><strong>Passioon</strong> – mis sind tõeliselt huvitab</li>
+      </ul>
+
+      <h2>📝 Blogi sektsiooni lisamine</h2>
+      
+      <p>Lisasin oma kodulehele blogi sektsiooni, kus leiab blogipostituse kuidas teenus "Juhi igapäevane tugi" ühendab kaks maailma – strateegilise mõtlemise ja käed-külge praktilise teostuse.</p>
+
+      <div class="highlight-box">
+        Tänan kõiki väikeettevõtjaid, kes rikastavad meie igapäevaelu oma töö ja loovusega. Teie tahe ja jõud teha seda, mida kõige paremini oskate, on inspireeriv ❤️
+      </div>
+
+      <h3>Miks on blogi oluline ettevõtjale?</h3>
+      <ul>
+        <li><strong>Eksperthinnang</strong> – näitad oma teadmisi ja kogemust</li>
+        <li><strong>SEO</strong> – aitab leida uusi kliente</li>
+        <li><strong>Usaldus</strong> – kliendid tunnevad sind paremini</li>
+        <li><strong>Võrgustik</strong> – jagad teadmisi ja saad tagasisidet</li>
+        <li><strong>Isiklik bränd</strong> – ehkad oma isiklikku brändi</li>
+      </ul>
+
+      <h2>Kuidas leida tasakaal ettevõtjana?</h2>
+      
+      <p>Ettevõtjana on oluline leida tasakaal erinevate tegevuste vahel:</p>
+      
+      <ul>
+        <li><strong>Töö ja puhkus</strong> – puhata, et töötada efektiivsemalt</li>
+        <li><strong>Kliendid ja areng</strong> – aega uute oskuste õppimiseks</li>
+        <li><strong>Üksindus ja võrgustik</strong> – aega mõelda ja aega suhtlemiseks</li>
+        <li><strong>Praktika ja strateegia</strong> – teha ja planeerida</li>
+        <li><strong>Edu ja õppimine</strong> – tähistada võite ja õppida vigadest</li>
+      </ul>
+
+      <div class="cta-section">
+        <h3>Kas tahad teada, kuidas saan sind toetada?</h3>
+        <p>Rohkem infot konsultatsioonide ja teenuste kohta leiad minu kodulehelt. Võta ühendust, kui tunned, et võiks midagi koos ära teha!</p>
+        <a href="index.html#contact" class="cta-btn">Kirjuta mulle</a>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      window.location.href = 'index.html#contact';
+    }
+  </script>
+</body>
+</html>
