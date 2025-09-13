@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mallid ja tööriistad - Kirke Laht | Äri- ja Juhtimisnõustaja</title>
+  <meta name="description" content="Praktilised mallid ja tööriistad ettevõtete jaoks. Exceli mallid, juhendid, kontrollnimekirjad ja muud kasulikud vahendid äri juhtimiseks.">
+  <meta name="keywords" content="mallid, tööriistad, Excel mallid, juhendid, kontrollnimekirjad, äri juhtimine, ettevõtlus">
+  <meta name="author" content="Kirke Laht">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kirkelaht.ee/mallid-ja-tooriistad.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kirkelaht.ee/mallid-ja-tooriistad.html">
+  <meta property="og:title" content="Mallid ja tööriistad - Kirke Laht | Äri- ja Juhtimisnõustaja">
+  <meta property="og:description" content="Praktilised mallid ja tööriistad ettevõtete jaoks. Exceli mallid, juhendid, kontrollnimekirjad ja muud kasulikud vahendid äri juhtimiseks.">
+  <meta property="og:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kirke Laht - Mallid ja tööriistad">
+  <meta property="og:site_name" content="Kirke Laht">
+  <meta property="og:locale" content="et_EE">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kirkelaht.ee/mallid-ja-tooriistad.html">
+  <meta property="twitter:title" content="Mallid ja tööriistad - Kirke Laht | Äri- ja Juhtimisnõustaja">
+  <meta property="twitter:description" content="Praktilised mallid ja tööriistad ettevõtete jaoks. Exceli mallid, juhendid, kontrollnimekirjad ja muud kasulikud vahendid äri juhtimiseks.">
+  <meta property="twitter:image" content="https://kirkelaht.ee/image/IMG_4742.jpg">
+  <meta property="twitter:image:alt" content="Kirke Laht - Mallid ja tööriistad">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1A1A1A;
+      background: #FAFAFA;
+    }
+
+    /* Navigation */
+    .main-navbar {
+      background: #FFFFFF;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #1A1A1A;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .menu li a:hover {
+      color: #F4B740;
+    }
+
+    .contact-btn {
+      background: #F4B740;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-btn:hover {
+      background: #DFAF2C;
+    }
+
+    /* Tools Header */
+    .tools-header {
+      background: #C9D8B6;
+      padding: 120px 24px 80px;
+      text-align: center;
+    }
+
+    .tools-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 24px;
+    }
+
+    .tools-header p {
+      font-size: 1.2rem;
+      color: #333333;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Tools Container */
+    .tools-container {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .coming-soon-section {
+      background: #F5F3EF;
+      padding: 60px 40px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px dashed #F4B740;
+      margin-bottom: 60px;
+    }
+
+    .coming-soon-section h2 {
+      color: #1A1A1A;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .coming-soon-section p {
+      color: #666666;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .construction-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .tools-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    .tool-card {
+      background: #FFFFFF;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(189, 189, 189, 0.2);
+      border: 1px solid #BDBDBD;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    .tool-card h3 {
+      color: #1A1A1A;
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+    }
+
+    .tool-card p {
+      color: #666666;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .tool-status {
+      background: #F4B740;
+      color: #1A1A1A;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* Back to Home */
+    .back-home {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-home a {
+      background: #F4B740;
+      color: #1A1A1A;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .back-home a:hover {
+      background: #DFAF2C;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-navbar {
+        padding: 12px 16px;
+      }
+      
+      .logo {
+        height: 40px;
+      }
+      
+      .menu {
+        display: none;
+      }
+      
+      .contact-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      .tools-header {
+        padding: 100px 16px 60px;
+      }
+      
+      .tools-header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tools-header p {
+        font-size: 1.1rem;
+      }
+
+      .tools-container {
+        padding: 60px 16px;
+      }
+      
+      .coming-soon-section {
+        padding: 40px 20px;
+      }
+      
+      .tools-preview {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .tool-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tools-header h1 {
+        font-size: 2rem;
+      }
+      
+      .tools-header p {
+        font-size: 1rem;
+      }
+      
+      .coming-soon-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-navbar">
+    <img src="image/logo.png" alt="Logo" class="logo" />
+    <ul class="menu">
+      <li><a href="index.html#about">Kes on Kirke?</a></li>
+      <li><a href="index.html#services">Teenused</a></li>
+      <li><a href="index.html#testimonials">Tagasiside</a></li>
+      <li><a href="index.html#blog">Blogi</a></li>
+      <li><a href="index.html#tools">Mallid ja tööriistad</a></li>
+      <li><a href="index.html#partners">Koostööpartnerid</a></li>
+    </ul>
+    <button onclick="window.location.href='index.html#contact'" class="contact-btn">Kirjuta mulle</button>
+  </nav>
+
+  <!-- Tools Header -->
+  <section class="tools-header">
+    <h1>Mallid ja tööriistad</h1>
+    <p>Praktilised vahendid, mis aitavad sul ettevõtet tõhusamalt juhtida. Exceli mallid, juhendid, kontrollnimekirjad ja muud kasulikud tööriistad.</p>
+    <div style="margin-top: 32px;">
+      <a href="index.html" style="background: #F4B740; color: #1A1A1A; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; display: inline-block;">← Tagasi avalehele</a>
+    </div>
+  </section>
+
+  <!-- Tools Content -->
+  <div class="tools-container">
+    <!-- Coming Soon Section -->
+    <div class="coming-soon-section">
+      <div class="construction-icon">🚧</div>
+      <h2>Töös</h2>
+      <p>Töötan praegu erinevate praktiliste mallide ja tööriistade kallal, mis aitaksid ettevõtjaid nende igapäevases töös. Need tulevad varsti kättesaadavaks!</p>
+      <p>Järgi uudiseid, et teada saada, millal need kättesaadavaks tulevad.</p>
+    </div>
+
+    <!-- Tools Preview -->
+    <div class="tools-preview">
+      <div class="tool-card">
+        <h3>📊 Finantsjuhtimise mallid</h3>
+        <p>Exceli mallid kasumlikkuse analüüsiks, eelarve planeerimiseks ja rahavoogude jälgimiseks.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>📋 Protsesside juhendid</h3>
+        <p>Kontrollnimekirjad ja juhendid ettevõtte põhiprotsesside korraldamiseks ja optimeerimiseks.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>📈 KPI ja mõõdikute mallid</h3>
+        <p>Mallid põhinäitajate jälgimiseks ja ettevõtte tulemuste mõõtmiseks.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>📝 Dokumentide mallid</h3>
+        <p>Ettevõtte sisemiste dokumentide ja juhendite mallid.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>🎯 Strateegia planeerimise tööriistad</h3>
+        <p>Mallid strateegilise planeerimise ja eesmärkide seadmise jaoks.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+
+      <div class="tool-card">
+        <h3>♻️ ESG ja jätkusuutlikkuse mallid</h3>
+        <p>Mallid ESG aruandluse ja jätkusuutlikkuse mõõtmise jaoks.</p>
+        <span class="tool-status">Töös</span>
+      </div>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="back-home">
+      <a href="index.html">← Tagasi avalehele</a>
+    </div>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      window.location.href = 'index.html#contact';
+    }
+  </script>
+</body>
+</html>
