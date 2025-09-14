@@ -8,11 +8,20 @@ Sitemap: https://kirkelaht.ee/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 
-# Allow all images
+# Allow all images and assets
 Allow: /image/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
 
-# Crawl delay (optional - be respectful to server)
-Crawl-delay: 1 
 # Performance optimizations
 Allow: /sw.js
 Allow: /manifest.json
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1
