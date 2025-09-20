@@ -35,13 +35,48 @@
     
     // QR Code Detection and Tracking
     function detectQRCodeVisitor() {
-      // Check if user came from direct traffic (typical for QR codes)
+      // Check for UTM parameters (your QR code already has these!)
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get('utm_source');
+      const utmMedium = urlParams.get('utm_medium');
+      const utmCampaign = urlParams.get('utm_campaign');
+      
+      // Check if user came from your QR code with UTM parameters
+      if (utmSource === 'business_card' && utmMedium === 'qr_code' && utmCampaign === 'networking') {
+        // Track QR code visit with UTM data
+        gtag('event', 'qr_code_scan_utm', {
+          'event_category': 'engagement',
+          'event_label': 'business_card_utm_tracking',
+          'value': 1,
+          'utm_source': utmSource,
+          'utm_medium': utmMedium,
+          'utm_campaign': utmCampaign
+        });
+        
+        // Set a session flag to track this user's journey
+        sessionStorage.setItem('qr_code_visitor', 'true');
+        sessionStorage.setItem('qr_utm_campaign', utmCampaign);
+        
+        console.log('QR Code visitor with UTM parameters detected and tracked');
+        console.log('UTM Campaign:', utmCampaign);
+        
+        // Also track as conversion goal if you set this up
+        gtag('event', 'conversion', {
+          'send_to': 'G-PKZXNQZ4PF/business_card_scan',
+          'event_category': 'qr_code',
+          'event_label': 'business_card_networking'
+        });
+        
+        return true;
+      }
+      
+      // Fallback: Check if user came from direct traffic (typical for QR codes without UTM)
       if (document.referrer === '' || document.referrer === window.location.href) {
         // Check if user is on mobile (most QR code scans are mobile)
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         
         // Additional check: if user landed directly on homepage with no referrer
-        if (isMobile && window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        if (isMobile && (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
           // Track QR code visit
           gtag('event', 'qr_code_scan', {
             'event_category': 'engagement',
@@ -54,9 +89,12 @@
           // Set a session flag to track this user's journey
           sessionStorage.setItem('qr_code_visitor', 'true');
           
-          console.log('QR Code visitor detected and tracked');
+          console.log('QR Code visitor detected and tracked (fallback method)');
+          return true;
         }
       }
+      
+      return false;
     }
     
     // Run QR detection when page loads
