@@ -73,6 +73,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kirkelaht.ee/qr-landing.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kirkelaht.ee/manifest.json</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
