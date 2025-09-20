@@ -32,6 +32,35 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PKZXNQZ4PF');
+    
+    // QR Code Detection and Tracking
+    function detectQRCodeVisitor() {
+      // Check if user came from direct traffic (typical for QR codes)
+      if (document.referrer === '' || document.referrer === window.location.href) {
+        // Check if user is on mobile (most QR code scans are mobile)
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        // Additional check: if user landed directly on homepage with no referrer
+        if (isMobile && window.location.pathname === '/' || window.location.pathname === '/index.html') {
+          // Track QR code visit
+          gtag('event', 'qr_code_scan', {
+            'event_category': 'engagement',
+            'event_label': 'business_card_homepage',
+            'value': 1,
+            'custom_parameter_1': 'mobile_device',
+            'custom_parameter_2': 'direct_traffic'
+          });
+          
+          // Set a session flag to track this user's journey
+          sessionStorage.setItem('qr_code_visitor', 'true');
+          
+          console.log('QR Code visitor detected and tracked');
+        }
+      }
+    }
+    
+    // Run QR detection when page loads
+    window.addEventListener('load', detectQRCodeVisitor);
   </script>
   
   <!-- Canonical URL -->
@@ -1212,7 +1241,41 @@
         behavior: 'smooth',
         block: 'start'
       });
+      
+      // Track contact button clicks from QR code visitors
+      if (sessionStorage.getItem('qr_code_visitor') === 'true') {
+        gtag('event', 'qr_visitor_contact_click', {
+          'event_category': 'engagement',
+          'event_label': 'contact_button_from_qr',
+          'value': 1
+        });
+      }
     }
+    
+    // Track other interactions from QR code visitors
+    function trackQRVisitorInteraction(action, element) {
+      if (sessionStorage.getItem('qr_code_visitor') === 'true') {
+        gtag('event', 'qr_visitor_interaction', {
+          'event_category': 'engagement',
+          'event_label': action,
+          'event_action': element,
+          'value': 1
+        });
+      }
+    }
+    
+    // Track when QR visitors scroll down (engagement)
+    let hasScrolled = false;
+    window.addEventListener('scroll', function() {
+      if (!hasScrolled && sessionStorage.getItem('qr_code_visitor') === 'true') {
+        hasScrolled = true;
+        gtag('event', 'qr_visitor_scroll', {
+          'event_category': 'engagement',
+          'event_label': 'page_scrolled',
+          'value': 1
+        });
+      }
+    });
 
     // Copy LinkedIn function
     function copyEmail() {
